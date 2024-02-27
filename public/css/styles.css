@@ -129,7 +129,7 @@ main section img{
 }
 
 .card__description {
-    display: none;
+    display: block;
 }
 
 .card__title {
@@ -197,6 +197,11 @@ section i {
     border-radius: 50px;
     border-width: 15px;
     color: #37B750;
+}
+
+.fa-truck:hover {
+    transform: rotate(-90deg);
+    transition: 800ms;
 }
 
 
@@ -267,13 +272,13 @@ footer {
     .productos {
         width: 50%;
     }
-    .card__description {
-        display: block;
-    }
     footer {
         display: flex;
         flex-direction: row;
         justify-content: center;
+    }
+    .card__description {
+        display: none;
     }
     .producto:hover {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
@@ -281,11 +286,8 @@ footer {
             display: block;
         }
     }
-    .card__description {
-        display: none;
-    }
-
 }
+
 
 @media (min-width: 1200px) {
     .header__logo {
@@ -318,10 +320,6 @@ footer {
     }
 }
 
-.fa-truck:hover {
-    transform: rotate(-90deg);
-    transition: 700ms;
-}
 
 
 
