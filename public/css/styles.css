@@ -267,10 +267,11 @@ footer {
     .body__main-ofertas, .body__main-visitas {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        align-items: flex-start;
+        justify-content: space-evenly;
     }
     .productos {
-        width: 50%;
+        width: 48%;
     }
     footer {
         display: flex;
@@ -316,7 +317,7 @@ footer {
         font-size: 19px;
     }
     .productos {
-        width: 25%;
+        width: 24%;
     }
 }
 
