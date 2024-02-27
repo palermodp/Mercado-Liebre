@@ -87,7 +87,16 @@ main section img{
     color: #222222;
     display: inline-block;
     padding: 5px 0;
-    font-size: 17px;
+}
+.main-navbar a:hover {
+    text-decoration: underline;
+    font-size: 21px;
+}
+
+.contenedor_banner {
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 .banner__img {
