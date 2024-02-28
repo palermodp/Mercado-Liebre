@@ -3,6 +3,9 @@ const path = require("path");
 
 const app = express();
 
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Servidor corriendo en puerto ${port}`));
+
 app.get("/", (req, res) => {
   res.sendFile(path.resolve("./views/index.html"));
 });
@@ -11,10 +14,12 @@ app.get("/register", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./views/register.html"));
 });
 
+app.post("/register", (req, res) => {
+  res.send("Se ha registrado de manera exitosa.");
+});
+
 app.get("/login", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./views/login.html"));
 });
-
-app.listen(3000, () => console.log("Running server."));
 
 app.use(express.static("public"));
