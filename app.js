@@ -1,9 +1,8 @@
 const express = require("express");
 const path = require("path");
-
+const port = process.env.PORT || 3000;
 const app = express();
 
-const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Servidor corriendo en puerto ${port}`));
 
 app.get("/", (req, res) => {
