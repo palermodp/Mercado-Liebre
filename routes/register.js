@@ -1,10 +1,8 @@
-let express = require("express");
-let path = require("path");
-let router = express.Router();
+const express = require("express");
+const router = express.Router();
+const registerController = require("../controllers/registerController");
 
-router.get("/", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../views/register.html"));
-});
+router.get("/", registerController.mostrarRegister);
 
 router.post("/", (req, res) => {
   res.send("Se ha registrado de manera exitosa.");

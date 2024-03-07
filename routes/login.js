@@ -1,9 +1,7 @@
-let express = require("express");
-let path = require("path");
-let router = express.Router();
+const express = require("express");
+const router = express.Router();
+const loginController = require("../controllers/loginController");
 
-router.get("/", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../views/login.html"));
-});
+router.get("/", loginController.mostrarLogin);
 
 module.exports = router;

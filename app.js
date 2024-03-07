@@ -1,10 +1,10 @@
-let express = require("express");
-let port = process.env.PORT || 3000;
-let app = express();
+const express = require("express");
+const port = process.env.PORT || 3000;
+const app = express();
 
-let rutasMain = require("./routes/index");
-let rutasLogin = require("./routes/login");
-let rutasRegister = require("./routes/register");
+const rutasMain = require("./routes/index");
+const rutasLogin = require("./routes/login");
+const rutasRegister = require("./routes/register");
 
 app.listen(port, () => console.log(`Servidor corriendo en puerto ${port}`));
 

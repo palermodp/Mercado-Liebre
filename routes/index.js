@@ -1,9 +1,7 @@
-let express = require("express");
-let path = require("path");
-let router = express.Router();
+const express = require("express");
+const router = express.Router();
+const indexController = require("../controllers/indexController");
 
-router.get("/", (req, res) => {
-  res.sendFile(path.resolve("./views/index.html"));
-});
+router.get("/", indexController.mostrarIndex);
 
 module.exports = router;
