@@ -6,10 +6,6 @@
     font-size: 22px;
 }
 
-body, html {
-    height: 100%;
-}
-
 
 /*----------SECCION HEADER----------*/
 
@@ -31,17 +27,36 @@ body, html {
 
 .barra__busqueda {
     display: flex;
-    border-radius: 4px;
-    border-color: #737272;
-    height: 30px;
-    width: 270px;
-    margin-left: 15px;
-    margin-right: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 300px;
 }
+
+.barra__busqueda input {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    outline: none;
+}
+
+.barra__busqueda button {
+    background-color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.fa-magnifying-glass {
+    color: #555;
+    
+}
+
+
 
 .barra__busqueda i {
     position: relative;
-    right: 20px
+    right: 15px
 }
 
 .header__logo i {
@@ -76,6 +91,7 @@ main section {
 main section img{
     margin: 10px 0;
 }
+
 
 .main-navbar {
     display: none;
@@ -288,10 +304,9 @@ footer {
     }
     .producto:hover {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
-    
-    .producto:hover .card__description {
-        display: block;
+        .card__description {
+            display: block;
+        }
     }
 }
 

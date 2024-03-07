@@ -1,24 +1,15 @@
-const express = require("express");
-const path = require("path");
-const port = process.env.PORT || 3000;
-const app = express();
+let express = require("express");
+let port = process.env.PORT || 3000;
+let app = express();
+
+let rutasMain = require("./routes/index");
+let rutasLogin = require("./routes/login");
+let rutasRegister = require("./routes/register");
 
 app.listen(port, () => console.log(`Servidor corriendo en puerto ${port}`));
 
-app.get("/", (req, res) => {
-  res.sendFile(path.resolve("./views/index.html"));
-});
-
-app.get("/register", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./views/register.html"));
-});
-
-app.post("/register", (req, res) => {
-  res.send("Se ha registrado de manera exitosa.");
-});
-
-app.get("/login", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./views/login.html"));
-});
+app.use("/", rutasMain);
+app.use("/login", rutasLogin);
+app.use("/register", rutasRegister);
 
 app.use(express.static("public"));
